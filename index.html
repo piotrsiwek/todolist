@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple JS to do list.</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+   
 </head>
 <body>
-    <main>
-       <section class="section-main"></section>
-        <h1>Simple JS to do list.</h1>
-        <form id="form">
-            <input type="text" id="input" placeholder="Enter a task...">
-            <button type="submit">Add</button>
-        </form>
-        <ul id="list"></ul>
+
+    <main class="main">
+       <div class="page-content">
+
+            <section class="section-apparea">
+                <h1>Simple JS to do list.</h1>
+                <section>
+                    <input type="text" id="provided-task" placeholder="Enter a task...">
+                    <button onclick="add()" >Add</button>
+                </section>
+
+                <section class="section-new__tasks">                </section>
+                <!-- new tasks come here -->
+
+            </section>
+         </div>
+         
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
