@@ -6,10 +6,16 @@ function add() {
         alert("Please enter a task to add.")        
     }else {
             let newElement = document.createElement("ul");
+            let trashCan = document.createElement("span");
+            trashCan.classList.add('section-new__tasksspan');
+
             // newElement.innerHTML = `${providedtask.value} <span>🗑️</span>`;
-            newElement.textContent = providedtask.value + '🗑️ ';
+            // newElement.textContent = providedtask.value + '🗑️ ';
+            trashCan.value = "🗑️"
+            newElement.innerText = `${providedtask.value}` ;
+            trashCan.innerText = `${trashCan.value}`;
             newTasks.appendChild(newElement);
-            
+            newElement.appendChild(trashCan);
             providedtask.value = '';
 
             // trash can function
@@ -17,7 +23,6 @@ function add() {
             function remove() {
                 newElement.remove();
             }
+            trashCan.value = '';
 }
 }
-
-

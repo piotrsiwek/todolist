@@ -29,8 +29,8 @@
 .section-new__tasks {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  /* justify-content: center; */
+  align-items: flex-start;
+  justify-content: space-between;
   background-color: #f5f5f5;
   width: 60%  ;
 }
@@ -43,4 +43,10 @@
   margin: 2px;
   width: 100%;
   
+  
+}
+
+.section-new__tasksspan {
+  margin: 1rem;
+  text-align: right;
 }
