@@ -5,10 +5,19 @@ function add() {
     if(providedtask.value == '') {
         alert("Please enter a task to add.")        
     }else {
-            let p = document.createElement('p');
-            p.textContent = providedtask.value;
-            newTasks.appendChild(p);
+            let newElement = document.createElement("ul");
+            // newElement.innerHTML = `${providedtask.value} <span>🗑️</span>`;
+            newElement.textContent = providedtask.value + '🗑️ ';
+            newTasks.appendChild(newElement);
+            
             providedtask.value = '';
-        }
-    
+
+            // trash can function
+            newElement.querySelector('span').addEventListener('click', remove);
+            function remove() {
+                newElement.remove();
+            }
 }
+}
+
+
